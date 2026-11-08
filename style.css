@@ -29,3 +29,13 @@ p { margin: 0 0 18px; color: var(--muted); }
 .footer { border-top: 1px solid var(--line); font-size: 14px; }
 nav a:hover, .footer a:hover { color: var(--accent); }
 @media (max-width: 720px) { .shell { width: calc(100% - 32px); } .hero { grid-template-columns: 1fr; } .shots, .modes { grid-template-columns: 1fr; } }
+
+video.hero-image { display: block; width: 100%; aspect-ratio: 16 / 9; background: var(--base); }
+#screenshot-viewer { position: fixed; width: min(1000px, 90vw); max-height: 90dvh; padding: 12px; background: var(--base); color: var(--ink); border: 1px solid var(--line); border-radius: 14px; }
+#screenshot-viewer::backdrop { background: #070910cf; }
+.viewer-image { object-fit: contain; max-height: 72dvh; border-radius: 8px; }
+.viewer-controls { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-top: 10px; }
+.viewer-count { color: var(--muted); font-size: 14px; }
+#screenshot-viewer button { color: var(--ink); font: inherit; background: #232938; border: 1px solid var(--line); border-radius: 8px; padding: 5px 10px; cursor: pointer; }
+#screenshot-viewer button:hover, #screenshot-viewer button:focus-visible { border-color: var(--accent); }
+#screenshot-viewer .viewer-close { position: absolute; top: 18px; right: 18px; min-width: 34px; }
