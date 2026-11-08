@@ -1,0 +1,31 @@
+:root { color-scheme: dark; --base: #10131b; --line: #2d3443; --ink: #f8f0dc; --muted: #b5bfce; --accent: #f3d58e; }
+* { box-sizing: border-box; }
+body { margin: 0; background: radial-gradient(ellipse at 18% 15%, #222238, transparent 42rem), var(--base); color: var(--ink); font: 16px/1.65 system-ui, sans-serif; }
+a { color: inherit; text-decoration: none; }
+a:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
+img { display: block; width: 100%; height: auto; }
+.shell { width: min(1120px, calc(100% - 48px)); margin-inline: auto; }
+.navigation, .footer { display: flex; justify-content: space-between; align-items: center; gap: 16px; padding-block: 20px; color: var(--muted); }
+.navigation { border-bottom: 1px solid var(--line); }
+.brand, nav { display: flex; align-items: center; gap: clamp(12px, 3vw, 24px); }
+.brand { gap: 8px; font-weight: 700; color: var(--ink); }
+.brand img { width: 28px; height: 28px; }
+.hero { display: grid; grid-template-columns: 1fr 1.35fr; align-items: center; gap: clamp(24px, 5vw, 64px); padding-block: clamp(32px, 7vw, 84px); }
+h1 { margin: 0 0 12px; max-width: 360px; }
+h1 img { margin-left: -7%; }
+p { margin: 0 0 18px; color: var(--muted); }
+.lead { margin-bottom: 8px; color: var(--ink); font-size: clamp(24px, 3vw, 36px); font-weight: 600; line-height: 1.15; letter-spacing: -.035em; }
+.steam { display: inline-flex; align-items: center; gap: 16px; padding: 11px 17px; border-radius: 10px; background: var(--accent); color: #17130d; font-weight: 700; }
+.steam:hover { background: #ffe7ac; }
+.hero-image { margin: 0; border: 1px solid var(--line); border-radius: 18px; overflow: hidden; box-shadow: 0 20px 70px #0006; }
+.gallery h2 { margin: 0 0 12px; font-size: 21px; }
+.shots, .modes { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+.shots a { display: block; overflow: hidden; border: 1px solid var(--line); border-radius: 12px; }
+.shots a:hover { border-color: var(--accent); }
+.modes { margin-block: 28px 44px; }
+.modes > div { border-top: 1px solid var(--line); padding-top: 14px; }
+.modes h2 { margin: 0 0 4px; font-size: 17px; }
+.modes p { margin: 0; font-size: 14px; }
+.footer { border-top: 1px solid var(--line); font-size: 14px; }
+nav a:hover, .footer a:hover { color: var(--accent); }
+@media (max-width: 720px) { .shell { width: calc(100% - 32px); } .hero { grid-template-columns: 1fr; } .shots, .modes { grid-template-columns: 1fr; } }
